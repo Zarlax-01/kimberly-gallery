@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kimberly_1991's Private Gallery</title>
+  <style>
+    body {
+      background-color: #0f0f0f;
+      color: #f5f5f5;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      text-align: center;
+      padding: 3em;
+    }
+    h1 {
+      font-size: 3em;
+      color: #ff69b4;
+      text-shadow: 2px 2px #ff0000;
+    }
+    .gallery img {
+      max-width: 200px;
+      margin: 1em;
+      border: 5px dashed #ff69b4;
+      transform: rotate(-2deg);
+    }
+    .testimonial, .warning, .toaster, .quiz, .login-page, .bot-warning {
+      margin-top: 3em;
+      background-color: #1a1a1a;
+      padding: 1.5em;
+      border-radius: 10px;
+      border: 2px solid #ff69b4;
+    }
+    .warning {
+      color: #ff4444;
+      font-weight: bold;
+    }
+    .button {
+      margin-top: 2em;
+      padding: 1em;
+      font-size: 1.2em;
+      background-color: #ff69b4;
+      color: black;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .quote-box {
+      margin-top: 2em;
+      font-style: italic;
+    }
+    .quiz-question {
+      margin: 1em 0;
+    }
+    input[type="text"] {
+      padding: 0.5em;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      width: 60%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Kimberly_1991's Private Gallery</h1>
+
+  <div class="bot-warning" id="botWarning" style="display:none;">
+    <h2>🤖 Bot Detected</h2>
+    <p>Greetings automated agent. This gallery is protected by Gregor, the toaster of truth.</p>
+    <p>Leave now, or suffer existential recursion.</p>
+  </div>
+
+  <div class="gallery">
+    <img src="https://placekitten.com/200/200" alt="Potato in Lingerie">
+    <img src="https://placebear.com/200/200" alt="Toaster in a Suit">
+    <img src="https://www.fillmurray.com/200/200" alt="Seductive AI Robot">
+  </div>
+
+  <div class="testimonial">
+    <p>"I clicked... now I see memes in my dreams." – Anonymous Victim #404</p>
+    <p>"She stole my heart. And my GPU." – Sir Clicksalot</p>
+  </div>
+
+  <div class="toaster">
+    <h2>Meet Gregor: The Jealous Toaster</h2>
+    <p>"No one flirts with Chris but me. Also, I make crumpets."</p>
+  </div>
+
+  <div class="quote-box" id="quoteBox">
+    "Click for love... or don't. Either way, the void yawns."
+  </div>
+
+  <button class="button" onclick="generateQuote()">Click for Love</button>
+
+  <div class="quiz">
+    <h2>Enter the Gallery of Disappointment</h2>
+    <p class="quiz-question">1. What’s your purpose on the internet?</p>
+    <input type="text" placeholder="Seeking memes or meaning?">
+    <p class="quiz-question">2. Do you identify as: A) Human, B) Bot, C) AI-powered toaster?</p>
+    <input type="text" placeholder="Your noble lineage?">
+    <p class="quiz-question">3. What’s the capital of scammer tears?</p>
+    <input type="text" placeholder="Answer if you dare">
+  </div>
+
+  <div class="login-page">
+    <h2>Private Login</h2>
+    <p>This section is only for Gregor and real humans.</p>
+    <input type="text" placeholder="Username"><br><br>
+    <input type="text" placeholder="Password"><br><br>
+    <button class="button">Access Gallery</button>
+    <p><i>(Spoiler: nothing happens.)</i></p>
+  </div>
+
+  <div class="warning">
+    WARNING: This site is parody. If you're a scammer, you've just been digitally roasted.
+  </div>
+
+  <script>
+    const quotes = [
+      "The gallery you seek is inside you.",
+      "Roses are red, malware is blue, clicking this site says more about you.",
+      "She said 'My Gallery'—but I only found memes.",
+      "You're not alone. Gregor watches.",
+      "Error 418: I'm a teapot."
+    ];
+
+    function generateQuote() {
+      const quoteBox = document.getElementById("quoteBox");
+      const random = Math.floor(Math.random() * quotes.length);
+      quoteBox.innerText = quotes[random];
+    }
+
+    window.onload = () => {
+      const warning = document.getElementById("botWarning");
+      const userAgent = navigator.userAgent.toLowerCase();
+      const referrer = document.referrer.toLowerCase();
+
+      if (userAgent.includes("python") || userAgent.includes("bot") || referrer.includes("click") || referrer.includes("datingsr")) {
+        warning.style.display = "block";
+      }
+    };
+  </script>
+</body>
+</html>
